@@ -1,0 +1,26 @@
+name: MaximusLogging
+version: '${project.version}'
+main: com.melodicalbuild.maximuslogging.MaximusLogging
+api-version: 1.18
+prefix: MaxiLog
+authors: [ MelodicAlbuild ]
+description: The Super Logging System for the Maximus SMP
+commands:
+  superlog:
+    description: Main command for the plugin. Display help.
+    aliases: [log,slog,sl]
+premissions:
+  superlog.*:
+    description: Give all permissions
+  superlog.notify:
+    description: Get logs messages in game
+  superlog.commands.*:
+    description: Give access to commands
+    children:
+      superlog.commands.access: true
+      superlog.commands.filtrer: true
+      superlog.commands.live: true
+      superlog.commands.player: true
+      superlog.commands.reload: true
+      superlog.commands.save: true
+      superlog.commands.toggle: true
